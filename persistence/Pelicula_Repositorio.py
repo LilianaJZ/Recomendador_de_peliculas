@@ -8,4 +8,4 @@ class Pelicula_Repositorio:
 
 
     def crear_pelicula(self):
-        query = """CREATE TABLE Pelicula ("""
+        query = """INSERT INTO """
