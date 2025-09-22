@@ -3,7 +3,7 @@ class Pelicula:
     # se nombra un constructor y dentro de ese construcctor se inicializan
     # los atributos de la clase
 
-    def __init__(self, id, titulo, anio, calificacion, duracion, descripcion, estado, director):
+    def __init__(self, id, titulo, anio, calificacion, duracion, descripcion, estado, director,categoria):
         self.__id = id #se utiliza la palabra reservada self que es igual al this en java
         self.__titulo = titulo
         self.__anio = anio
@@ -12,6 +12,7 @@ class Pelicula:
         self.__descripcion = descripcion
         self.__estado = estado
         self.__director = director
+        self.__categoria = categoria
 
 
 
@@ -84,8 +85,15 @@ class Pelicula:
     def director(self, director):
         self.__director = director
 
+    @property
+    def categoria(self):
+        return self.__categoria
 
-    # polimorfismo por sobreescritura de objetos
+    @categoria.setter
+    def categoria(self, categoria):
+        self.__categoria = categoria
+
+# polimorfismo por sobreescritura de objetos
     # si un lenguaje es orientado a objetos el concepto por detrás es
     # exactamente el mismo
 
