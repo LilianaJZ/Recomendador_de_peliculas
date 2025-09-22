@@ -1,3 +1,4 @@
+import mysql
 from mysql.conector import connector
 
 
@@ -23,7 +24,7 @@ class Conexion:
                 )
                 print("Conectado con exito")
             except mysql.connector.Error as error:
-                print("No se puedo establecer conexion", error)
+                print("No se pudo establecer conexion", error)
 
         def disconnect(self):
             if self.connection:
