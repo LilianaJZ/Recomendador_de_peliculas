@@ -5,29 +5,36 @@ se puede hacer un constructor e inicializar pelicula
 pelicula va a ser un objeto y aqui se pone la logica que va a tener el codigo
 '''
 
+from domain.model.Categoria import Categoria
+from domain.service.Categoria_Service import Categoria_Service
+from domain.model.Pelicula import Pelicula
+
 class Pelicula_Service:
 
     #inyeccion de dependencias, donde recibo un objeto
-    def __init__(self, pelicula):
-        self.pelicula = pelicula
+    def __init__(self):
+        self.pelicula = Pelicula(None, None, None, None, None, None, None, None, None)
+        self.categoria = Categoria(None, None)
+        self.categoria_service = Categoria_Service()
 
     #aqui se inicializa el objeto y se le dan valores
-    def crear_pelicula(self, pelicula):
+    def crear_pelicula(self, pelicula, categoria):
         id = int(input("Ingrese el ID de la pelicula: "))
-        self.pelicula.id = id #este es el set
-        titulo = int(input("Ingrese el nombre de la pelicula: "))
-        self.pelicula.titulo = titulo  # este es el set
-        anio = int(input("Ingrese el anio de la pelicula: "))
+        self.pelicula.id = id
+        titulo = input("Ingrese el nombre de la pelicula: ")
+        self.pelicula.titulo = titulo
+        anio = input("Ingrese el año de estreno de la pelicula: ")
         self.pelicula.anio = anio
-        calificacion = int(input("Ingrese el calificacion de la pelicula: "))
+        calificacion = input("Ingrese el calificacion de la pelicula: ")
         self.pelicula.calificacion = calificacion
-        duracion = int(input("Ingrese el duracion de la pelicula: "))
+        duracion = input("Ingrese la duracion de la pelicula: ")
         self.pelicula.duracion = duracion
-        estado = int(input("Ingrese el estado de la pelicula: "))
+        estado = input("Ingrese la estado de la pelicula: ")
         self.pelicula.estado = estado
-        categorie = int(input("Ingrese el categoria de la pelicula: "))
-        self.pelicula.categorie = categorie
-        director = int(input("Ingrese el director de la pelicula: "))
+        self.categoria_service.mostrar_categorias()
+        categoria = int(input("Ingrese el Id de la categoria de la pelicula: "))
+        self.pelicula.categoria = categoria
+        director = input("Ingrese el director de la pelicula: ")
         self.pelicula.director = director
 
 
