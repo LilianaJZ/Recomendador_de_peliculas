@@ -1,4 +1,4 @@
-from  domain.model import Usuario
+from  domain.model.Usuario import Usuario
 
 class Usuario_Free(Usuario):
     def __init__(self, id, nombre, correo, contrasena, flag_free, ads):
