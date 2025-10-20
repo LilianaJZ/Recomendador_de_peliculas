@@ -1,6 +1,6 @@
 class Pelicula:
 
-    # se nombra un constructor y dentro de ese construcctor se inicializan
+    # se nombra un constructor y dentro de ese constructor se inicializan
     # los atributos de la clase
 
     def __init__(self, id, titulo, anio, calificacion, duracion, descripcion, estado, director,categoria):
