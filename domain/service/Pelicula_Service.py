@@ -17,7 +17,7 @@ class Pelicula_Service:
         self.categoria = Categoria(None, None)
         self.categoria_service = Categoria_Service()
 
-    #aqui se inicializa el objeto y se le dan valores
+    #aqui se inicializa el objeto y se le dan valores. Se pasa el objeto de categoria para hacer la relacion
     def crear_pelicula(self, pelicula, categoria):
         id = int(input("Ingrese el ID de la pelicula: "))
         self.pelicula.id = id
