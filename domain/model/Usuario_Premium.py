@@ -1,4 +1,6 @@
-class Usuario_Premium:
+from domain.model.Usuario import Usuario
+
+class Usuario_Premium (Usuario):
 
     def __init__(self, id,  nombre, correo, contrasena, flag_premium ,tipo_plan,  fecha_inicio, fecha_final):
         super().__init__(self, id,  nombre, correo, contrasena)
